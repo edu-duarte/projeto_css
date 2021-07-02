@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./mycss.css" rel="stylesheet"/> <!-- Importando arquivo CSS externo -->
+    <style>
+        #my-input {
+            background-color: rgb(187, 221, 159);
+        }
+        #my-input:hover {
+            background-color: rgb(137, 168, 112);
+        }
+        .paginacompleta {
+            display: flex;
+            flex-wrap: wrap;
+            width: auto;
+            height: 250px;
+            background-color: thistle;
+            align-items: center; /* Objetos alinhados pelo centro*/
+            justify-content: space-between; /* Objetos espaçados igualmente entre si*/
+        }
+
+        .parent-container {
+            height: 200px;
+            width: 200px;
+            border: solid 2px black;
+            /* Coloquei esse comentário para mostrar que pode ser feita apenas uma linha com todos os comandos abaixo */
+            /* border-color: red */
+            /* border-style: solid */
+            /* border-bottom: 2px */
+            /* border-top: 2px */
+            /* border-left: 2px */
+            /* border-right: 2px */
+            background-color: royalblue;
+            margin: 10px;
+        }
+
+        .my-div1 {
+            color: rgb(28, 168, 87);
+            font-weight: 600;
+            background-color: wheat;
+            font-family:'Courier New', Courier, monospace;
+            /* Ele vai procurar a fonte Courier New, se não achar vai para a Courier e se não achar para a monospace*/
+            font-size: 20px;
+            padding: 2px 2px;
+            /* entre o elemento e a borda pode usar padding-top e etc também*/
+            margin: 4px 4px;
+            /* por fora do elemento*/
+            border: 2px dashed red;
+            text-align: center;
+        }
+        
+        .my-div1::first-letter {
+            font-size: 30px; /* Este é um pseudo-elemento que vai modificar apenas a primeira letra do "Olá, Mundo"*/
+        }
+
+        .my-div2 {
+            color: rgb(235, 163, 30);
+            font-weight: bold;
+            background-color: rgb(188, 228, 240);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 2px 2px;
+            font-size: 15px;
+            /* entre o elemento e a borda pode usar padding-top e etc também*/
+            margin: 4px 4px;
+            /* por fora do elemento*/
+            border: 2px dashed red;
+            text-align: center;
+        }
+
+        .my-div3 {
+            color: rgb(150, 27, 231);
+            font-weight: 100;
+            background-color: rgb(124, 123, 121);
+            padding: 2px 2px;
+            font-size: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /* entre o elemento e a borda pode usar padding-top e etc também*/
+            margin: 4px 4px;
+            /* por fora do elemento*/
+            border: 2px dashed red;
+            text-align: center;
+        }
+        .my-div4 {
+            color: rgb(150, 27, 231);
+            font-weight: 100;
+            background-color: rgb(98, 197, 119);
+            padding: 2px 2px;
+            font-size: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /* entre o elemento e a borda pode usar padding-top e etc também*/
+            margin: 4px 4px;
+            /* por fora do elemento*/
+            border: 2px dashed red;
+            text-align: center;
+        }
+        @media (max-width: 6 00px) {
+            .paginacompleta {
+                background-color: salmon;
+            }
+        }
+
+     
+    </style>
+</head>
+
+<body>
+    <div class="paginacompleta">
+        <div class="parent-container">
+            <div class="my-div1">
+                Olá, Mundo 1!
+                <input id="my-input">
+            </div>
+        </div>
+
+        <div class="parent-container">
+            <div class="my-div2">
+                Olá, Mundo 2!
+            </div>
+        </div>
+
+        <div class="parent-container">
+            <div class="my-div3">
+                Olá, Mundo 3!
+            </div>
+        </div>
+
+        <div class="parent-container">
+            <div class="my-div4">
+                Olá, Mundo 4!
+            </div>
+        </div>
+    </div>
+
+    <div class="my-divexterna" style="color: rgb(219, 79, 144);">
+        Teste de CSS externo
+    </div>
+
+    <div style="color: red;">
+        Teste de CSS inline
+    </div>
+
+</body>
+
+</html>
